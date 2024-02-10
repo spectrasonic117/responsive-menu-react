@@ -1,0 +1,79 @@
+.Cabecera {
+	background: black;
+	width: 100%;
+	padding: 1rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+}
+
+.Cabecera-a {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.Cabecera-button {
+	display: none;
+}
+.Cabecera-svg {
+	width: 2em;
+	height: 2em;
+	fill: white;
+}
+
+.Cabecera-ul {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+	align-items: center;
+}
+.Cabecera-li {
+	margin: 0 0.5em;
+}
+
+@media screen and (max-width: 430px) {
+	.Cabecera-button {
+		display: flex;
+	}
+	.Cabecera-nav {
+		width: 100%;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+		height: 0vh;
+		overflow: hidden;
+		opacity: 0;
+		transition: all 0.5s ease;
+	}
+
+	.Cabecera-nav.isActive {
+		height: 50vh;
+		opacity: 1;
+	}
+
+	.Cabecera-ul {
+		flex-direction: column;
+	}
+	.Cabecera-li {
+		margin: 0.3em 0;
+		width: 100vh;
+		height: 40px;
+		text-align: center;
+	}
+	.Cabecera-li a {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.Cabecera-li:hover {
+		background: rgb(79, 79, 79);
+	}
+	.Cabecera-li:active {
+		background: rgb(79, 79, 79);
+	}
+}
